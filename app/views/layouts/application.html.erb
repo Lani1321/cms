@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Content Management System</title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cedarville+Cursive|Give+You+Glory|Meddon" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow+Condensed|Cedarville+Cursive|Give+You+Glory|Meddon" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    <%= render 'layouts/navigation' %>
+  <body>
+    
+    <%= yield %>
+  </body>
+</html>

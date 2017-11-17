@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#rss {
+  background-color: #F6F6F8;
+}
+
+#media {
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;   
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #4ed6aa;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    height: 100px;
+    box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.45);
+}
+
+.navbar-right {
+  padding-top: 12px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: white !important;
+}
+
+#error_explanation {
+  margin-left: 32%;
+}
+
+.field {
+  display: inline-block;
+  text-align: center;
+}
+
+body {
+  padding: 80px;
+  background-color: #F6F6F8;
+  color: #747474;
+  /*font-family: 'Give You Glory', cursive;*/
+}
+
+h1 {
+  color: grey;
+  font-family: 'Give You Glory', cursive;
+  text-align: center;
+  font-size: 80px;
+  padding-bottom: 65px;
+}
+
+h2 {
+  color: grey;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+}
+
+h6 a:hover {
+  font-weight: bold;
+  /*color: #f4511e;*/
+}
+
+li {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+}
+
+btn {
+  color: #45D0A0;
+}
+
+form {
+  display: inline-block;
+  text-align: center;
+}
+
+
+/*TODO: use gem to auto format images*/
+img {
+}

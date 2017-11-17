@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid" id="media">
+  <% @contents.each do |content| %>
+    <h1><%= content.title %></h1>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h1><%= image_tag "#{content.image_url}" %></h1>
+      </div>
+        
+      <div class="col-sm-6">
+        <iframe width="560" height="315" src=<%= "https://www.youtube.com/embed/#{content.video_url}" %> frameborder="10" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  <br>
+</div>
+
+<!-- If there is no RSS feed provided, I parse through the nytimes rss anyway so the page isn't so empty -->
+<div class="container-fluid" id="rss">
+  <% rss = RSS::Parser.parse("#{content.rss_url}", false) %>
+  <% if rss == nil %>
+    <% rss = RSS::Parser.parse("http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", false) %>
+    <% rss.items.each do |item| %>
+      <h6><%= link_to item.title, item.link, :target => "_blank" %></h6>
+      <li><%= "#{item.description}"%></li>
+      <br>
+    <% end %>
+  <% else %>
+    <% rss = RSS::Parser.parse("#{content.rss_url}", false) %>
+    <% rss.items.each do |item| %>
+      <h6><%= link_to item.title, item.link, :target => "_blank" %></h6>
+      <li><%= "#{item.description}"%></li>
+      <br>
+    <% end %>
+  <% end %>
+  <% end %>
+</div>

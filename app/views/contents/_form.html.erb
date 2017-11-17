@@ -1,0 +1,30 @@
+<%= form_for(content) do |f| %>
+  <% if content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+      <ul>
+      <% content.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="input-group">
+      
+      <%= f.text_field :title, placeholder: "Title", class: 'form-control', size: "20" %>
+
+      <%= f.text_field :image_url, placeholder: "Paste your image URL here", class: 'form-control', size: "20" %>
+      
+      <%= f.text_field :video_url, placeholder: "Paste your video URL here", class: 'form-control', size: "20" %>
+
+      <%= f.text_field :rss_url, placeholder: "Paste your RSS URL here", class: 'form-control', size: "20" %>
+    </div>
+  </div>
+
+    <div class="input-group-btn">
+      <%= f.submit "Submit", class: "btn" %>
+    </div>
+<% end %>
